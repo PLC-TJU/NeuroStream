@@ -1,0 +1,19 @@
+# Define the folder path
+echo 
+echo "*****************************************"
+echo "Please wait while EEG-BIDS is starting..."
+echo "*****************************************"
+echo
+
+folder_path="/Applications/MATLAB/MATLAB_Runtime/R2022b/"
+script_dir=$(dirname "$0")
+
+# Check if the folder exists
+if [ ! -d "$folder_path" ]; then
+    # Folder does not exist, show a pop-up window using AppleScript
+    osascript -e 'tell app "System Events" to display dialog "The folder '"$folder_path"' is not present. You need to install the MATLAB R2022b runtime engine." buttons {"OK"} default button 1'
+else
+    echo "The folder $folder_path exists."
+fi
+
+"$script_dir/run_EEGLAB.sh" $folder_path "bids_exporter;"

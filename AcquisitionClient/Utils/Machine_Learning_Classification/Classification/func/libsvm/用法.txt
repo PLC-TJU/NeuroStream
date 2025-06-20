@@ -1,0 +1,68 @@
+SVMmodel = svmtrain(trainlabel,Fea,'-t 0 -c 1 -q'); %训练
+[prediction,Acc,dv]=svmpredict(testlabel,Fea,SVMmodel); %测试
+
+libsvm具体说明可见：
+https://blog.csdn.net/LPFFFFF/article/details/89334763
+
+ > -s     svm类型：SVM设置类型(默认0)
+ 0 -- C-SVC 
+ 1 -- v-SVC 
+ 2 -- 类SVM 
+ 3 -- e -SVR
+ 4 -- v-SVR
+
+> -t 核函数类型：核函数设置类型(默认2)
+0 –线性：u'v
+1 –多项式：(r*u'v + coef0)^degree
+2 – RBF函数：exp(-gamma|u-v|^2)
+3 –sigmoid：tanh(r*u'v + coef0)
+
+-d degree：核函数中的degree设置(针对多项式核函数)(默认3)
+-g r(gama)：核函数中的gamma函数设置(针对多项式/rbf/sigmoid核函数)(默认1/ k)
+-r coef0：核函数中的coef0设置(针对多项式/sigmoid核函数)((默认0)
+-c cost：设置C-SVC，e -SVR和v-SVR的参数(损失函数)(默认1)
+-n nu：设置v-SVC，一类SVM和v- SVR的参数(默认0.5)
+-p p：设置e -SVR 中损失函数p的值(默认0.1)
+-m cachesize：设置cache内存大小，以MB为单位(默认40)
+-e eps：设置允许的终止判据(默认0.001)
+-h shrinking：是否使用启发式，0或1(默认1)
+-wi weight：设置第几类的参数C为weight*C(C-SVC中的C)(默认1)
+-v n: n-fold交互检验模式，n为fold的个数，必须大于等于2
+
+其中-g选项中的k是指输入数据中的属性数。option -v 随机地将数据剖分为n部
+当构建完成model后，还要为上述参数选择合适的值，
+方法主要有Gridsearch,其他的感觉不常用，Gridsearch说白了就是穷举。
+
+Parameters: [5x1 double]  %结构体变量，依次保存的是 -s -t -d -g -r等参数
+nr_class: 4    %分类的个数
+totalSV: 39    %总的支持向量个数
+rho: [6x1 double]   %b=-model.rho
+Label: [4x1 double]
+ProbA: []
+ProbB: []
+nSV: [4x1 double]  %每一类的支持向量的个数
+sv_coef: [39x3 double] %支持向量的系数
+SVs: [39x12 double] %具体的支持向量，以稀疏矩阵的形式存储
+w*x+b=0   其中
+w=model.SVs'*model.sv_coef
+b=-model.rho
+w是高维空间中分类 超平面的法向量，b是常数项。
+
+optimization finished,
+ #iter = 162
+ nu = 0.431029
+ obj = -100.877288,
+ rho = 0.424462
+ nSV = 132, 
+ nBSV = 107
+ Total nSV = 132
+其中，#iter为迭代次数，
+nu是你选择的核函数类型的参数，
+obj为SVM文件转换为的二次规划求解得到的最小值,
+rho为判决函数的偏置项b，
+nSV为标准支持向量个数，
+nBSV为边界上的支持向量个数(a[i]=c)，
+Total nSV为支持向量总个数（对于两类来说，因为只有一个分类模型Total nSV = nSV，
+但是对于多类，这个是各个分类模型的nSV之和）。
+
+

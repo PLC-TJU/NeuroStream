@@ -1,0 +1,2 @@
+testing/data/*.set filter=lfs diff=lfs merge=lfs -text
+testing/data/*.fdt filter=lfs diff=lfs merge=lfs -text
