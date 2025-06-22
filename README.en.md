@@ -173,7 +173,7 @@ StimulateClient;
 <p align="center"> 
 <img src="AcquisitionClient/Resources/Images/framework_en.jpg" alt="System Architecture" width="100%" align="center">
 <br>
-<em>Figure 2: Overall System Architecture<em>
+<em>Figure 2: Overall System Architecture</em>
 </p>
 
 ### 采集端架构

@@ -175,7 +175,7 @@ StimulateClient;
 <p align="center"> 
 <img src="AcquisitionClient/Resources/Images/framework_ch.jpg" alt="整体架构" width="100%" align="center">
 <br>
-<em>图2：整体架构<em>
+<em>图2：整体架构</em>
 </p>
 
 ### 采集端架构
