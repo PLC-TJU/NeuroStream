@@ -226,12 +226,12 @@ StimulateClient/
 <p align="center">  
 <img src="AcquisitionClient/Resources/Images/AcquisitionClient.png" alt="Acquisition Client" width="80%" align="center">
 <br>
-<em>Figure 3: AcquisitionClient Interface<em>
+<em>Figure 3: AcquisitionClient Interface</em>
 <br>
 <br>
 <img src="StimulateClient/Resources/Images/StimulateClient.png" alt="Stimulate Client" width="50%" align="center">
 <br>
-<em>Figure 4: StimulateClient Interface<em>
+<em>Figure 4: StimulateClient Interface</em>
 </p>
 
 
@@ -294,16 +294,17 @@ If you use this system or related algorithms in your research, please cite:
 
 ## 8. Related Resources
 This project builds upon the following open-source projects and research resources:
-- [<img src="https://img.shields.io/badge/GitHub-NeuroDeckit-b31b1b"></img>](https://github.com/PLC-TJU/NeuroDeckit) 
+- [<img src="https://img.shields.io/badge/GitHub-NeuroDeckit-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="NeuroDeckit"></img>](https://github.com/PLC-TJU/NeuroDeckit) 
 Comprehensive EEG Processing Toolbox
-- [<img src="https://img.shields.io/badge/GitHub-RSF-b31b1b"></img>](https://github.com/PLC-TJU/RSF)
+- [<img src="https://img.shields.io/badge/GitHub-RSF-4c1?logo=github&logoColor=white&style=flat-square&labelColor=4c1&color=white" height="20" alt="RSF"></img>](https://github.com/PLC-TJU/RSF)
 Riemannian Spatial Filtering
-- [<img src="https://img.shields.io/badge/GitHub-RSFDA-b31b1b"></img>](https://github.com/PLC-TJU/RSFDA)
+- [<img src="https://img.shields.io/badge/GitHub-RSFDA-6e5494?logo=github&logoColor=white&style=flat-square&labelColor=6e5494&color=white" height="20" alt="RSFDA"></img>](https://github.com/PLC-TJU/RSFDA)
 Riemann Spatial Filtering & Domain Adaptation
-- [<img src="https://img.shields.io/badge/GitHub-CTSSP-b31b1b"></img>](https://github.com/PLC-TJU/CTSSP)
+- [<img src="https://img.shields.io/badge/GitHub-CTSSP-e05d44?logo=github&logoColor=white&style=flat-square&labelColor=e05d44&color=white" height="20" alt="CTSSP"></img>](https://github.com/PLC-TJU/CTSSP)
 Common Temporal-Spectral-Spatial Patterns
-- [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-b31b1b"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 一个专注Covariance Toolbox for Riemannian Geometry
-- [<img src="https://img.shields.io/badge/GitHub-SBLEST-b31b1b"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
+- [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-555?logo=github&logoColor=white&style=flat-square&labelColor=555&color=white" height="20" alt="covariancetoolbox"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 
+Covariance Toolbox for Riemannian Geometry
+- [<img src="https://img.shields.io/badge/GitHub-SBLEST-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
 Sparse Bayesian Learning for EEG Classification
 
 

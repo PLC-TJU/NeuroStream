@@ -228,12 +228,12 @@ StimulateClient/
 <p align="center">  
 <img src="AcquisitionClient/Resources/Images/AcquisitionClient.png" alt="AcquisitionClient界面" width="80%" align="center">
 <br>
-<em>图3：采集端主界面<em>
+<em>图3：采集端主界面</em>
 <br>
 <br>
 <img src="StimulateClient/Resources/Images/StimulateClient.png" alt="StimulateClient界面" width="50%" align="center">
 <br>
-<em>图4：反馈端主界面<em>
+<em>图4：反馈端主界面</em>
 </p>
 
 
@@ -297,17 +297,17 @@ StimulateClient/
 
 ## 8. 相关研究资源
 本项目的实现基于以下开源项目，特此致谢：
-- [<img src="https://img.shields.io/badge/GitHub-NeuroDeckit-b31b1b"></img>](https://github.com/PLC-TJU/NeuroDeckit) 
+- [<img src="https://img.shields.io/badge/GitHub-NeuroDeckit-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="NeuroDeckit"></img>](https://github.com/PLC-TJU/NeuroDeckit) 
 EEG信号全流程处理工具箱
-- [<img src="https://img.shields.io/badge/GitHub-RSF-b31b1b"></img>](https://github.com/PLC-TJU/RSF)
+- [<img src="https://img.shields.io/badge/GitHub-RSF-4c1?logo=github&logoColor=white&style=flat-square&labelColor=4c1&color=white" height="20" alt="RSF"></img>](https://github.com/PLC-TJU/RSF)
 基于黎曼几何的空间滤波算法
-- [<img src="https://img.shields.io/badge/GitHub-RSFDA-b31b1b"></img>](https://github.com/PLC-TJU/RSFDA)
+- [<img src="https://img.shields.io/badge/GitHub-RSFDA-6e5494?logo=github&logoColor=white&style=flat-square&labelColor=6e5494&color=white" height="20" alt="RSFDA"></img>](https://github.com/PLC-TJU/RSFDA)
 黎曼空间滤波与域适应算法
-- [<img src="https://img.shields.io/badge/GitHub-CTSSP-b31b1b"></img>](https://github.com/PLC-TJU/CTSSP)
+- [<img src="https://img.shields.io/badge/GitHub-CTSSP-e05d44?logo=github&logoColor=white&style=flat-square&labelColor=e05d44&color=white" height="20" alt="CTSSP"></img>](https://github.com/PLC-TJU/CTSSP)
 公共时间-频谱-空间模式算法
-- [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-b31b1b"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 
+- [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-555?logo=github&logoColor=white&style=flat-square&labelColor=555&color=white" height="20" alt="covariancetoolbox"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 
 一个专注于黎曼几何方法的MATLAB工具箱
-- [<img src="https://img.shields.io/badge/GitHub-SBLEST-b31b1b"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
+- [<img src="https://img.shields.io/badge/GitHub-SBLEST-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
 基于稀疏朴素贝叶斯学习的脑电解码方法
 
 
