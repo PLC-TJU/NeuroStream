@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
 
+中文版本 | [English Version](./README_en.md)
 
 ## 目录
 - [1. 项目简介](#1-项目简介)
@@ -158,29 +159,9 @@ StimulateClient;
 ```
 
 **双系统协同工作流程**
-```mermaid
-sequenceDiagram
-    participant N as NeuroScan
-    participant A as AcquisitionClient
-    participant S as StimulateClient
-    participant U as 被试
-    
-    S->>U: 发送任务提示(视觉/听觉)
-    U->>N: 执行运动想象任务
-    N->>A: 原始EEG数据流(实时)
-    A->>A: 信号预处理(滤波/ICA)
-    A->>A: 特征提取(时域/频域/空间)
-    A->>A: 实时分类解码
-    A->>S: UDP控制指令(解码结果)
-    S->>U: 呈现视觉/听觉反馈
-    loop 实验循环
-        S->>S: 记录实验数据
-        A->>A: 记录EEG数据与解码结果
-    end
-```
 
 <p align="center"> 
-<img src="AcquisitionClient/Resources/Images/workflow_ch.png" alt="工作流程" width="90%"> 
+<img src="AcquisitionClient/Resources/Images/workflow_ch.jpg" alt="工作流程" width="90%"> 
 <br> 
 <em>图1：系统工作流程</em> 
 </p>
@@ -190,20 +171,9 @@ sequenceDiagram
 ## 5. 系统架构
 
 ### 整体架构
-```mermaid
-graph LR
-    U[被试] -->|执行任务| N[NeuroScan]
-    N -->|EEG数据| A[AcquisitionClient]
-    A -->|处理信号| F[特征提取]
-    F -->|解码| M[机器学习模型]
-    M -->|结果| S[StimulateClient]
-    S -->|反馈| U
-    A --> D[(数据存储)]
-    S --> D
-``` 
 
 <p align="center"> 
-<img src="AcquisitionClient/Resources/Images/framework_ch.png" alt="整体架构" width="100%" align="center">
+<img src="AcquisitionClient/Resources/Images/framework_ch.jpg" alt="整体架构" width="100%" align="center">
 <br>
 <em>图2：整体架构<em>
 </p>

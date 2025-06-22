@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
 
+English Version | [中文版本](./README.md)
 
 ## Table of Contents
 - [1. Project Overview](#1-project-overview)
@@ -156,29 +157,9 @@ StimulateClient;
 ```
 
 **Collaborative Workflow**
-```mermaid
-sequenceDiagram
-    participant N as NeuroScan
-    participant A as AcquisitionClient
-    participant S as StimulateClient
-    participant U as Participant
-    
-    S->>U: Display task cue (arrow direction)
-    U->>N: Perform motor imagery
-    N->>A: Transmit EEG data (real-time)
-    A->>A: Signal preprocessing
-    A->>A: Feature extraction
-    A->>A: Real-time classification
-    A->>S: Send UDP command
-    S->>U: Present visual feedback
-    loop 30 trials
-        S->>S: Update trial counter
-        A->>A: Log EEG and decoding results
-    end
-```
 
 <p align="center"> 
-<img src="AcquisitionClient/Resources/Images/workflow_en.png" alt="Workflow Diagram" width="90%"> 
+<img src="AcquisitionClient/Resources/Images/workflow_en.jpg" alt="Workflow Diagram" width="90%"> 
 <br> 
 <em>Figure 1: System Workflow</em> 
 </p>
@@ -188,20 +169,9 @@ sequenceDiagram
 ## 5. System Architecture
 
 ### Overall Architecture
-```mermaid
-graph LR
-    U[Participant] -->|Perform Motor Imagery| N[NeuroScan]
-    N -->|EEG Acquisition| A[AcquisitionClient]
-    A -->|Signal Processing| F[Feature Extraction]
-    F -->|Decoding| M[Model]
-    M -->|UDP Feedback| S[StimulateClient]
-    S -->|Feedback| U
-    A --> D[(Data Storage)]
-    S --> D
-``` 
 
 <p align="center"> 
-<img src="AcquisitionClient/Resources/Images/framework_en.png" alt="System Architecture" width="100%" align="center">
+<img src="AcquisitionClient/Resources/Images/framework_en.jpg" alt="System Architecture" width="100%" align="center">
 <br>
 <em>Figure 2: Overall System Architecture<em>
 </p>
