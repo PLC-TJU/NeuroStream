@@ -6,8 +6,8 @@
 % Journal of Biomedical Engineering, 2025, 42(2):272-279.
 
 function model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans, varargin)
-% STACKING_TRAIN 训练一个基于多时间窗、多频带、多通道和多算法的Stacking集成模型
-% 使用并行计算加速子模型训练
+% STACKING_TRAIN 训练一个基于RSFDA的多时间窗、频带和通道的Stacking集成模型
+% 使用并行计算加速基模型训练
 
 % 输入:
 %   Xs,Xt: 源域、目标域EEG数据 (通道×时间点×样本数)
