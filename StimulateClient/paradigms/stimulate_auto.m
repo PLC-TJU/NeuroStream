@@ -166,7 +166,7 @@ try
     
     %结束实验
     pauseFlag(1,position1,position2);% 执行暂停
-    if i>=length(allmode)
+    if i>=length(TrialNum)
         cprintf('*Comments','实验正常完成！\n');
     else
         cprintf('*Errors','实验未完成，程序被中止！\n');

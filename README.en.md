@@ -57,7 +57,7 @@ The system offers a complete experimental platform for BCI research, particularl
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
-| **Experiment Paradigms** | Left/right hand motor imagery<br>Audiovisual task cues<br>Parameter configuration | Standardized protocols<br>Precise timing control (<5ms error) |
+| **Experiment Paradigms** | Left/right hand motor imagery<br>Audiovisual task cues<br>Parameter configuration | Standardized protocols<br>Precise timing control |
 | **Feedback Presentation** | Real-time decoding visualization<br>Gamified feedback interface<br>Multimodal feedback (visual+auditory) | Immersive feedback experience<br>Customizable feedback formats |
 | **Data Recording** | Automatic experiment logging<br>Participant response tracking<br>Timestamp synchronization | Standardized data formats<br>EEG-data synchronization |
 | **System Control** | Experiment workflow management<br>UDP communication<br>System monitoring | Reliable communication protocol<br>Error handling mechanisms |

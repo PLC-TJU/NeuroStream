@@ -43,7 +43,7 @@ classdef UDPComm < handle
                 obj.UdpObj.RemotePort = remotePort;
                 
                 % 3. 配置“收到 2 字节”时触发回调
-                configureCallback(obj.UdpObj, "byte", 2, @(src,~) obj.processUDPData(src));
+                configureCallback(obj.UdpObj, "byte", 4, @(src,~) obj.processUDPData(src));
                 
                 % 4. 发送连接请求
                 write(obj.UdpObj, uint8([255,1,0,0]), "uint8", remoteHost, remotePort);
