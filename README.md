@@ -301,16 +301,20 @@ StimulateClient/
 本项目的实现基于以下开源项目，特此致谢：
 - [<img src="https://img.shields.io/badge/GitHub-NeuroDeckit-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="NeuroDeckit"></img>](https://github.com/PLC-TJU/NeuroDeckit) 
 EEG信号全流程处理工具箱
-- [<img src="https://img.shields.io/badge/GitHub-RSF-4c1?logo=github&logoColor=white&style=flat-square&labelColor=4c1&color=white" height="20" alt="RSF"></img>](https://github.com/PLC-TJU/RSF)
+- [<img src="https://img.shields.io/badge/GitHub-RSF-4c1?logo=github&logoColor=white&style=flat-square&labelColor=4c1&color=white" height="20" alt="RSF"></img>](https://github.com/PLC-TJU/RSF) 
 基于黎曼几何的空间滤波算法
-- [<img src="https://img.shields.io/badge/GitHub-RSFDA-6e5494?logo=github&logoColor=white&style=flat-square&labelColor=6e5494&color=white" height="20" alt="RSFDA"></img>](https://github.com/PLC-TJU/RSFDA)
+- [<img src="https://img.shields.io/badge/GitHub-RSFDA-6e5494?logo=github&logoColor=white&style=flat-square&labelColor=6e5494&color=white" height="20" alt="RSFDA"></img>](https://github.com/PLC-TJU/RSFDA) 
 黎曼空间滤波与域适应算法
-- [<img src="https://img.shields.io/badge/GitHub-CTSSP-e05d44?logo=github&logoColor=white&style=flat-square&labelColor=e05d44&color=white" height="20" alt="CTSSP"></img>](https://github.com/PLC-TJU/CTSSP)
+- [<img src="https://img.shields.io/badge/GitHub-CTSSP-e05d44?logo=github&logoColor=white&style=flat-square&labelColor=e05d44&color=white" height="20" alt="CTSSP"></img>](https://github.com/PLC-TJU/CTSSP) 
 公共时间-频谱-空间模式算法
+- [<img src="https://img.shields.io/badge/GitHub-RAVE-6a0dad?logo=github&logoColor=white&style=flat-square&labelColor=6a0dad&color=white" height="20" alt="RAVE"></img>](https://github.com/PLC-TJU/RAVE) 
+基于黎曼几何的自适应增强与集成学习算法
 - [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-555?logo=github&logoColor=white&style=flat-square&labelColor=555&color=white" height="20" alt="covariancetoolbox"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 
 一个专注于黎曼几何方法的MATLAB工具箱
-- [<img src="https://img.shields.io/badge/GitHub-SBLEST-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
+- [<img src="https://img.shields.io/badge/GitHub-SBLEST-ffd43b?logo=github&logoColor=white&style=flat-square&labelColor=ffd43b&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
 基于稀疏朴素贝叶斯学习的脑电解码方法
+- [<img src="https://img.shields.io/badge/GitHub-EEGLAB-1997b5?logo=github&logoColor=white&style=flat-square&labelColor=1997b5&color=white" height="20" alt="EEGLAB"></img>](https://github.com/sccn/eeglab) 
+EEG信号处理的开源MATLAB工具箱
 
 
 <a id="9-作者与贡献者"></a> 

@@ -304,10 +304,14 @@ Riemannian Spatial Filtering
 Riemann Spatial Filtering & Domain Adaptation
 - [<img src="https://img.shields.io/badge/GitHub-CTSSP-e05d44?logo=github&logoColor=white&style=flat-square&labelColor=e05d44&color=white" height="20" alt="CTSSP"></img>](https://github.com/PLC-TJU/CTSSP)
 Common Temporal-Spectral-Spatial Patterns
+- [<img src="https://img.shields.io/badge/GitHub-RAVE-6a0dad?logo=github&logoColor=white&style=flat-square&labelColor=6a0dad&color=white" height="20" alt="RAVE"></img>](https://github.com/PLC-TJU/RAVE) 
+Riemannian Geometry-based Adaptive Boosting and Voting Ensemble
 - [<img src="https://img.shields.io/badge/GitHub-covariancetoolbox-555?logo=github&logoColor=white&style=flat-square&labelColor=555&color=white" height="20" alt="covariancetoolbox"></img>](https://github.com/alexandrebarachant/covariancetoolbox) 
 Covariance Toolbox for Riemannian Geometry
-- [<img src="https://img.shields.io/badge/GitHub-SBLEST-007ec6?logo=github&logoColor=white&style=flat-square&labelColor=007ec6&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
+- [<img src="https://img.shields.io/badge/GitHub-SBLEST-ffd43b?logo=github&logoColor=white&style=flat-square&labelColor=ffd43b&color=white" height="20" alt="SBLEST"></img>](https://github.com/EEGdecoding/Code-SBLEST) 
 Sparse Bayesian Learning for EEG Classification
+- [<img src="https://img.shields.io/badge/GitHub-EEGLAB-1997b5?logo=github&logoColor=white&style=flat-square&labelColor=1997b5&color=white" height="20" alt="EEGLAB"></img>](https://github.com/sccn/eeglab) 
+Open-source MATLAB toolbox for EEG signal processing
 
 
 <a id="9-authors--contributors"></a>
