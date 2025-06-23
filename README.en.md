@@ -217,7 +217,7 @@ StimulateClient/
 │   ├── Images/                # Image resources
 │   └── Videos/                # Video resources
 ├── Utils/                     # Utility functions
-├── StimulusProgram.mlapp      # Main application
+├── StimulateClient.mlapp      # Main application
 ```
 
 

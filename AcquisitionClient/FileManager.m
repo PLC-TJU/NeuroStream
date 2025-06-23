@@ -445,7 +445,7 @@ classdef FileManager < handle
             fig = uifigure('Name', 'EEG 数据文件列表', ...
                 'Position', [100 100 900 500], ...
                 'WindowStyle','alwaysontop',...%置顶
-                'Icon','app_icon_1.png');
+                'Icon','app_icon_2.png');
 
             % 检查元数据表是否为空
             if isempty(obj.DataTable) || height(obj.DataTable) == 0
@@ -531,7 +531,7 @@ classdef FileManager < handle
             fig = uifigure('Name', '批量合并 EEG 数据', ...
                 'Position', [200 200 500 400], ... % 增加高度以容纳更大的列表框
                 'WindowStyle','alwaysontop',...%置顶
-                'Icon', 'app_icon_1.png');
+                'Icon', 'app_icon_2.png');
         
             % 检查元数据表是否为空
             if isempty(obj.DataTable) || height(obj.DataTable) == 0

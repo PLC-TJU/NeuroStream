@@ -219,7 +219,7 @@ StimulateClient/
 │   ├── Images/                # 图像资源
 │   └── Videos/                # 视频资源
 ├── Utils/                     # 工具函数
-├── StimulusProgram.mlapp      # 主应用程序
+├── StimulateClient.mlapp      # 主应用程序
 ```
 
 

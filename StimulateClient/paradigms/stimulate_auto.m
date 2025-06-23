@@ -98,7 +98,7 @@ try
         %% 确定任务模式
         if strcmp(Block,'online_game')   
             % 获取游戏进程
-            [prediction,sample,position] = DetectDirection;
+            [prediction,sample] = DetectDirection;
             mode=prediction;
 
             % 确保获取足够的两类样本
@@ -232,7 +232,7 @@ if SaveFig ~=0
     end
 
     filepath=fullfile(folder,['Samples_',datetime('now','Format','yyyyMMdd_HHmmss'),'.mat']);
-    save(filepath,'samples','labels','position')
+    save(filepath,'samples','labels')
 end
 end
 

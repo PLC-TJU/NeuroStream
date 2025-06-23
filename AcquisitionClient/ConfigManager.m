@@ -149,7 +149,7 @@ classdef ConfigManager < handle
             % 展示一个仅用于“查看”的对话框，显示当前配置字段
             d = uifigure('Name','当前配置查看', ...
                 'Position',[500 300 420 350], ...
-                'Icon','app_icon_3.png');
+                'Icon','app_icon_2.png');
             d.Resize = 'off';
             
             uilabel(d, ...
@@ -170,7 +170,7 @@ classdef ConfigManager < handle
             d = uifigure('Name','修改配置', ...
                 'Position',[400 200 500 560], ...
                 'WindowStyle','alwaysontop',...%置顶
-                'Icon','app_icon_3.png');
+                'Icon','app_icon_2.png');
             d.Resize = 'off';
             
             % 标题

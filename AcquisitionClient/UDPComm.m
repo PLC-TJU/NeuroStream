@@ -46,7 +46,7 @@ classdef UDPComm < handle
                 configureCallback(obj.UdpObj, "byte", 2, @(src,~) obj.processUDPData(src));
                 
                 % 4. 发送连接请求
-                write(obj.UdpObj, uint8([255,1]), "uint8", remoteHost, remotePort);
+                write(obj.UdpObj, uint8([255,1,0,0]), "uint8", remoteHost, remotePort);
                 
                 % 5. 启动 2 秒超时检测
                 obj.ConnectionTimer = timer(...
@@ -72,7 +72,7 @@ classdef UDPComm < handle
             
             try
                 % 读取2字节数据
-                data = read(src, 2, "uint8");  
+                data = read(src, 4, "uint8");  
     
                 % 协议处理
                 switch data(1)
@@ -97,7 +97,7 @@ classdef UDPComm < handle
 
                 case 1  % 收到连接请求
                     % 发送连接确认[255, 2]
-                    write(app.udp_ctrl, uint8([255, 2]), "uint8", ...
+                    write(app.udp_ctrl, uint8([255,2,0,0]), "uint8", ...
                         app.udp_ctrl.RemoteIP, app.udp_ctrl.RemotePort);
                     disp('收到连接请求，已发送确认');
 
@@ -136,7 +136,7 @@ classdef UDPComm < handle
                 error('UDP 未连接或已关闭');
             end
 
-            % 构建数据包：[254, 分类结果]
+            % 构建数据包：[254,~,~,分类结果]
             try
                 packet = uint8([254, dataBytes]);
                 write(obj.UdpObj, packet, "uint8", ...
@@ -150,7 +150,7 @@ classdef UDPComm < handle
             % stop 发送断开通知(0xFF00)，并清理全部资源
             if ~isempty(obj.UdpObj) && isvalid(obj.UdpObj)
                 try
-                    write(obj.UdpObj, uint8([255,0]), "uint8", ...
+                    write(obj.UdpObj, uint8([255,0,0,0]), "uint8", ...
                         obj.UdpObj.RemoteHost, obj.UdpObj.RemotePort);
                     pause(0.05);
                 catch
