@@ -52,7 +52,7 @@ The system offers a complete experimental platform for BCI research, particularl
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
 | **Data Acquisition** | • Real-time NeuroScan EEG acquisition<br>• Impedance monitoring<br>• Multi-channel visualization | • Real-time data stream support<br>• Low-latency acquisition |
-| **Signal Processing** | • Bandpass filtering (1-40Hz adjustable)<br>• ICA artifact removal<br>• Riemannian Spatial Filtering (RSF)<br>• Common Spatial Patterns (CSP) | • Real-time processing pipeline<br>• Configurable parameters<br>• Multiple spatial filtering algorithms |
+| **Signal Processing** | • Bandpass filtering (1-40Hz adjustable)<br>• ICA artifact removal<br>• Riemannian Spatial Filtering (RSF) | • Real-time processing pipeline<br>• Configurable parameters<br>• Multiple spatial filtering algorithms |
 | **Feature Analysis** | • Time-domain (ERP)<br>• Frequency-domain (PSD)<br>• Time-frequency (ERSP)<br>• Topographic mapping | • Multi-dimensional feature extraction<br>• Interactive visualization<br>• Feature selection tools |
 | **Machine Learning** | • Model training (SBLEST, CTSSP)<br>• Model evaluation (accuracy, confusion matrix)<br>• Transfer learning (MEKT, RSFDA)<br>• Real-time EEG decoding | • Multiple classification algorithms<br>• Transfer learning framework<br>• Online adaptive learning |
 | **Feedback Control** | • UDP command transmission<br>• Real-time decoding feedback<br>• System monitoring | • Low-latency communication <br>• Configurable feedback parameters |
