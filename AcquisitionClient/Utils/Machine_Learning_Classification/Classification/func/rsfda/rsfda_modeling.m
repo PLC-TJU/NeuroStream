@@ -196,8 +196,8 @@ if verbose
     fprintf('训练元分类器 (%s)...\n', model.classifierType);
 end
 
-Y = cat(1, Ys(:), Yt(:));
-model.metaModel = train_classifier(metaFeatures, Y, model.classifierType, ...
+% Y = cat(1, Ys(:), Yt(:));
+model.metaModel = train_classifier(metaFeatures, Yt, model.classifierType, ...
         model.optimize, model.timeLimit);
 
 if verbose
