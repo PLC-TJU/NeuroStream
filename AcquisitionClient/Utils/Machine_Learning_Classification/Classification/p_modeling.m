@@ -24,6 +24,7 @@ addParameter(p, 'OptimizeTimeLimit', 30, @isnumeric);
 addParameter(p, 'UseDecisionValues', true, @islogical);
 
 % 算法特定参数
+addParameter(p, 'metric', 'riemann', @ischar);
 addParameter(p, 'nFilters', 4, @isnumeric);
 addParameter(p, 'freqsbands', [4,8;8,12;12,16;16,20;20,24;24,28;28,32;8,30], @isnumeric);
 addParameter(p, 'sblest_tau', 1, @isnumeric);
@@ -107,10 +108,10 @@ else
                 optimize, timeLimit);
             
         case {'FGMDM', '3'}
-            Model = fgmdm_modeling(traindata, trainlabel);
+            Model = fgmdm_modeling(traindata, trainlabel, params.metric);
             
         case {'TSM', '4'}
-            Model = tsm_modeling(traindata, trainlabel, classifierType, ...
+            Model = tsm_modeling(traindata, trainlabel, params.metric, classifierType, ...
                 optimize, timeLimit);
             
         case {'TRCA', '5'}

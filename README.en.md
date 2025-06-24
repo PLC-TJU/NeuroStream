@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
 
-English Version | [中文版本](./README.md)
+English Version | [中文版本](./README.ch.md)
 
 ## Table of Contents
 - [1. Project Overview](#1-project-overview)
@@ -36,7 +36,7 @@ The system offers a complete experimental platform for BCI research, particularl
 - 🔁 Neurofeedback training systems
 - 🎮 Brain-controlled device interaction
 
-[![Rick Astley - Never Gonna Give You Up](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Rick Astley - Never Gonna Give You Up](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.bilibili.com/video/BV1UT42167xb/?vd_source=688a96f2275da749eb2dd276281528c4)
 
 
 <a id="2-key-features"></a>
@@ -44,6 +44,9 @@ The system offers a complete experimental platform for BCI research, particularl
 ## 2. Key Features
 
 ### 🧪 AcquisitionClient - EEG Data Acquisition & Processing System
+
+<div style="display: flex; justify-content: center; margin: 20px 0">
+<div style="width: 90%">
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
@@ -53,7 +56,38 @@ The system offers a complete experimental platform for BCI research, particularl
 | **Machine Learning** | Model training (SBLEST, CTSSP)<br>Model evaluation (accuracy, confusion matrix)<br>Transfer learning (MEKT, RSFDA)<br>Real-time EEG decoding | Multiple classification algorithms<br>Transfer learning framework<br>Online adaptive learning |
 | **Feedback Control** | UDP command transmission<br>Real-time decoding feedback<br>System monitoring | Low-latency communication <br>Configurable feedback parameters |
 
+</div>
+</div>
+
+### Supported Classification Algorithms
+
+<div style="display: flex; justify-content: center; margin: 20px 0">
+<div style="width: 90%">
+
+| Algorithm Name | Key Parameters | Function Interfaces |
+|----------------|----------------|---------------------|
+| **CSP** | • `nFilters`: Number of filters<br>• `classifierType`: Classifier type | `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>`[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
+| **FBCSP** | • `freqsbands`: Frequency band range array<br>• `nFilters`: Number of filters<br>• `fs`: Sampling rate | `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>`[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
+| **FgMDM** | • `metric`: Distance metric | `model = fgmdm_modeling(traindata,trainlabel,metric)`<br>`[predlabel, decision_values, testacc] = fgmdm_classify(model, testdata, testlabel)` |
+| **TSM** | • `classifierType`: Classifier type<br>• `optimize`: Whether to automatically optimize classifier parameters<br>• `timeLimit`: Maximum time limit for classifier parameter optimization | `model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)`<br>`[predlabel, decision_values, testacc] = tsm_classify(model, testdata, testlabel)` |
+| **TRCA** | - | `model = trca_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = trca_classify(model, testdata, testlabel)` |
+| **DCPM** | - | `model = dcpm_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = dcpm_classify(model, testdata, testlabel)` |
+| **SBLEST** | • `tau`: Time delay parameter | `model = sblest_modeling(traindata, trainlabel, tau)`<br>`[predlabel, decision_values, testacc] = sblest_classify(model, testdata, testlabel)` |
+| **CTSSP** | • `t_win`: Time window cell array<br>• `tau`: Time delay parameter | `model = ctssp_modeling(traindata, trainlabel, t_win, tau)`<br>`[predlabel, decision_values, testacc] = ctssp_classify(model, testdata, testlabel)` |
+| **ENSEMBLE** | • `alg`: List of base algorithms<br>• `useDecisionValues`: Use decision values/predicted values | Meta-learning by integrating classification results of multiple base algorithms<br>`model = p_modeling(traindata, trainlabel, alg, varargin)`<br>`[predlabel, decision_values, testacc] = p_classify(model, testdata, testlabel)` |
+| **RSFDA**<br>(for transfer learning) | • `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | `model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans)`<br>`[predlabel, decision_values, testacc] = rsfda_classify(model, testdata, testlabel)` |
+| **Stacking** | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>`model = stacking_modeling(data, label, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_classify(model, testdata, testlabel)` |
+| **Stacking**<br>(for transfer learning) | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>`model = stacking_tlmodeling(Xs, Ys, Xt, Yt, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_tlclassify(model, testdata, testlabel)` |
+
+> **Note**: The above function interfaces are examples. Please adjust according to the actual implementation when using. Some algorithm parameters are not listed; see the source code for details.
+
+</div>
+</div>
+
 ### 🎮 StimulateClient - Experiment Paradigm & Feedback System
+
+<div style="display: flex; justify-content: center; margin: 20px 0">
+<div style="width: 90%">
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
@@ -61,6 +95,9 @@ The system offers a complete experimental platform for BCI research, particularl
 | **Feedback Presentation** | Real-time decoding visualization<br>Gamified feedback interface<br>Multimodal feedback (visual+auditory) | Immersive feedback experience<br>Customizable feedback formats |
 | **Data Recording** | Automatic experiment logging<br>Participant response tracking<br>Timestamp synchronization | Standardized data formats<br>EEG-data synchronization |
 | **System Control** | Experiment workflow management<br>UDP communication<br>System monitoring | Reliable communication protocol<br>Error handling mechanisms |
+
+</div>
+</div>
 
 <a id="3-installation--dependencies"></a>
 

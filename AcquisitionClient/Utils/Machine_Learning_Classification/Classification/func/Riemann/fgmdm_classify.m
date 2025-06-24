@@ -7,7 +7,7 @@ if ~exist('testlabel','var') || isempty(testlabel)
     testlabel = [];
 end
 
-method_dist = 'riemann';
+metric = model.metric;
 Cg = model.Cg;
 W = model.W;
 Nclass = model.Nclass;
@@ -21,7 +21,7 @@ testcov = geodesic_filter(testcov, Cg, W(:,1:Nclass-1));
 d = zeros(size(testcov,3), Nclass);
 for j = 1:size(testcov,3)
     for i = 1:Nclass
-        d(j,i) = distance(testcov(:,:,j), MC{i}, method_dist);
+        d(j,i) = distance(testcov(:,:,j), MC{i}, metric);
     end
 end
 

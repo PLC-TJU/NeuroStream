@@ -2,8 +2,11 @@
 % Author: LC Pan
 % Date: Jul. 1, 2024
 
-function model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)
+function model = tsm_modeling(traindata, trainlabel, metric, classifierType, optimize, timeLimit)
 % 切线空间模型训练函数
+if ~exist('metric','var') || isempty(metric)
+    metric = 'riemann';
+end
 if ~exist('classifierType','var') || isempty(classifierType)
     classifierType = 'LOGISTIC';
 end
@@ -14,11 +17,10 @@ if ~exist('timeLimit','var') || isempty(timeLimit)
     timeLimit = 30;
 end
 
-method_mean = 'riemann';
 traincov = covariances(traindata);
 
 % 切线空间映射
-MC = mean_covariances(traincov, method_mean);
+MC = mean_covariances(traincov, metric);
 Strain = Tangent_space(traincov, MC)';
 
 % 特殊处理：当选择TSLDA时使用原算法
@@ -65,6 +67,7 @@ classifier = train_classifier(Strain, trainlabel, classifierType, ...
         optimize, timeLimit);
 
 model.name = 'TSM';
+model.metric = metric;
 model.MC = MC;
 model.classifier = classifier;
 model.classifierType = classifierType;
