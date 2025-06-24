@@ -46,7 +46,7 @@
 ### 🧪 AcquisitionClient - 脑电数据采集与处理系统
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
 | 功能类别 | 详细功能 | 技术特点 |
 |----------|----------|----------|
@@ -62,9 +62,9 @@
 ### 支持的分类算法
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
-| 算法名称 | 关键参数 | 函数接口 |
+| 分类方法     | 关键参数 | 函数接口 |
 |----------|----------|----------|
 | **CSP** | • `nFilters`: 滤波器数量<br>• `classifierType`: 分类器类型 | `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>`[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
 | **FBCSP** | • `freqsbands`: 频带范围数组<br>• `nFilters`: 滤波器数量<br>• `fs`: 采样率 | `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>`[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
@@ -88,7 +88,7 @@
 ### 🎮 StimulateClient - 实验范式与反馈系统
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
 | 功能类别 | 详细功能 | 技术特点 |
 |----------|----------|----------|

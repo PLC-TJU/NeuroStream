@@ -46,7 +46,7 @@ The system offers a complete experimental platform for BCI research, particularl
 ### 🧪 AcquisitionClient - EEG Data Acquisition & Processing System
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
@@ -62,9 +62,9 @@ The system offers a complete experimental platform for BCI research, particularl
 ### Supported Classification Algorithms
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
-| Algorithm Name | Key Parameters | Function Interfaces |
+| Algorithm      | Key Parameters | Function Interfaces |
 |----------------|----------------|---------------------|
 | **CSP** | • `nFilters`: Number of filters<br>• `classifierType`: Classifier type | `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>`[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
 | **FBCSP** | • `freqsbands`: Frequency band range array<br>• `nFilters`: Number of filters<br>• `fs`: Sampling rate | `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>`[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
@@ -87,7 +87,7 @@ The system offers a complete experimental platform for BCI research, particularl
 ### 🎮 StimulateClient - Experiment Paradigm & Feedback System
 
 <div style="display: flex; justify-content: center; margin: 20px 0">
-<div style="width: 90%">
+<div style="width: 95%">
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
