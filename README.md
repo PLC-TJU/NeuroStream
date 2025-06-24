@@ -1,8 +1,9 @@
 # NeuroStream
 ***Online Brain-Computer Interface Recognition and Feedback System***
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![996.icu](https://img.shields.io/badge/link-996.icu-green.svg)](https://996.icu) 
 
 English Version | [中文版本](./README.ch.md)
 
@@ -398,7 +399,7 @@ SOFTWARE.
 
 
 ## 
-Last Updated: June 23, 2025  
+Last Updated: June 25, 2025  
 Maintainer: Lincong Pan  
 Project Home: https://github.com/PLC-TJU/NEUROSTREAM  
 Contact: panlincong@tju.edu.cn  

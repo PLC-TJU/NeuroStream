@@ -1,8 +1,9 @@
 # NeuroStream
 ***脑机接口在线识别与反馈系统***
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![996.icu](https://img.shields.io/badge/link-996.icu-green.svg)](https://996.icu) 
 
 中文版本 | [English Version](./README.en.md)
 
@@ -394,7 +395,7 @@ Copyright (c) 2023-2025 潘林聪
 
 
 ## 
-最后更新: 2025年6月23日  
+最后更新: 2025年6月25日  
 项目维护: 潘林聪 (Lincong Pan)  
 项目主页: https://github.com/PLC-TJU/NEUROSTREAM  
 联系邮箱: panlincong@tju.edu.cn  
