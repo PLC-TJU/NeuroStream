@@ -1,4 +1,5 @@
-# Online Brain-Computer Interface Recognition and Feedback System
+# NeuroStream
+***Online Brain-Computer Interface Recognition and Feedback System***
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)

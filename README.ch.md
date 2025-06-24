@@ -1,4 +1,5 @@
-# 脑机接口在线识别与反馈系统
+# NeuroStream
+***脑机接口在线识别与反馈系统***
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB Version](https://img.shields.io/badge/MATLAB-R2021b%20or%20higher-red.svg)](https://www.mathworks.com/products/matlab.html)
@@ -51,7 +52,7 @@
 | 功能类别 | 详细功能 | 技术特点 |
 |----------|----------|----------|
 | **数据采集** | • 实时采集NeuroScan脑电数据<br>• 阻抗监测与显示<br>• 多通道数据可视化 | • 支持NeuroScan实时数据流<br>• 低延迟数据采集 |
-| **信号处理** | • 带通滤波(1-40Hz可调)<br>• ICA伪迹去除<br>• 黎曼空间滤波(RSF)<br>• 共空间模式(CSP) | • 实时处理流水线<br>• 可配置处理参数<br>• 支持多种空间滤波算法 |
+| **信号处理** | • 带通滤波(1-40Hz可调)<br>• ICA伪迹去除<br>• 黎曼空间滤波(RSF) | • 实时处理流水线<br>• 可配置处理参数<br>• 支持多种空间滤波算法 |
 | **特征分析** | • 时域分析(ERP)<br>• 频域分析(PSD)<br>• 时频分析(ERSP)<br>• 脑地形图可视化 | • 多维度特征提取<br>• 交互式可视化<br>• 特征选择工具 |
 | **机器学习** | • 模型训练与评估<br>• 迁移学习框架<br>• 实时脑电信号解码<br>• **支持多种分类算法** | • 支持多种分类算法<br>• 迁移学习框架<br>• 在线自适应学习<br>• 详见下方算法列表 |
 | **反馈控制** | • UDP指令传输<br>• 实时解码结果反馈<br>• 系统状态监控 | • 低延迟通信<br>• 可配置反馈参数 |
