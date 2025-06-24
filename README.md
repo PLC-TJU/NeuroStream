@@ -50,11 +50,11 @@ The system offers a complete experimental platform for BCI research, particularl
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
-| **Data Acquisition** | Real-time NeuroScan EEG acquisition<br>Impedance monitoring<br>Multi-channel visualization | NeuroScan real-time data stream support<br>Low-latency acquisition |
-| **Signal Processing** | Bandpass filtering (1-40Hz adjustable)<br>ICA artifact removal<br>Riemannian Spatial Filtering (RSF)<br>Common Spatial Patterns (CSP) | Real-time processing pipeline<br>Configurable parameters<br>Multiple spatial filtering algorithms |
-| **Feature Analysis** | Time-domain (ERP)<br>Frequency-domain (PSD)<br>Time-frequency (ERSP)<br>Topographic mapping | Multi-dimensional feature extraction<br>Interactive visualization<br>Feature selection tools |
-| **Machine Learning** | Model training (SBLEST, CTSSP)<br>Model evaluation (accuracy, confusion matrix)<br>Transfer learning (MEKT, RSFDA)<br>Real-time EEG decoding | Multiple classification algorithms<br>Transfer learning framework<br>Online adaptive learning |
-| **Feedback Control** | UDP command transmission<br>Real-time decoding feedback<br>System monitoring | Low-latency communication <br>Configurable feedback parameters |
+| **Data Acquisition** | • Real-time NeuroScan EEG acquisition<br>• Impedance monitoring<br>• Multi-channel visualization | • NeuroScan real-time data stream support<br>• Low-latency acquisition |
+| **Signal Processing** | • Bandpass filtering (1-40Hz adjustable)<br>• ICA artifact removal<br>• Riemannian Spatial Filtering (RSF)<br>• Common Spatial Patterns (CSP) | • Real-time processing pipeline<br>• Configurable parameters<br>• Multiple spatial filtering algorithms |
+| **Feature Analysis** | • Time-domain (ERP)<br>• Frequency-domain (PSD)<br>• Time-frequency (ERSP)<br>• Topographic mapping | • Multi-dimensional feature extraction<br>• Interactive visualization<br>• Feature selection tools |
+| **Machine Learning** | • Model training (SBLEST, CTSSP)<br>• Model evaluation (accuracy, confusion matrix)<br>• Transfer learning (MEKT, RSFDA)<br>• Real-time EEG decoding | • Multiple classification algorithms<br>• Transfer learning framework<br>• Online adaptive learning |
+| **Feedback Control** | • UDP command transmission<br>• Real-time decoding feedback<br>• System monitoring | • Low-latency communication <br>• Configurable feedback parameters |
 
 </div>
 </div>
@@ -66,18 +66,18 @@ The system offers a complete experimental platform for BCI research, particularl
 
 | Algorithm      | Key Parameters | Function Interfaces |
 |----------------|----------------|---------------------|
-| **CSP** | • `nFilters`: Number of filters<br>• `classifierType`: Classifier type | `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>`[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
-| **FBCSP** | • `freqsbands`: Frequency band range array<br>• `nFilters`: Number of filters<br>• `fs`: Sampling rate | `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>`[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
-| **FgMDM** | • `metric`: Distance metric | `model = fgmdm_modeling(traindata,trainlabel,metric)`<br>`[predlabel, decision_values, testacc] = fgmdm_classify(model, testdata, testlabel)` |
-| **TSM** | • `classifierType`: Classifier type<br>• `optimize`: Whether to automatically optimize classifier parameters<br>• `timeLimit`: Maximum time limit for classifier parameter optimization | `model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)`<br>`[predlabel, decision_values, testacc] = tsm_classify(model, testdata, testlabel)` |
-| **TRCA** | - | `model = trca_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = trca_classify(model, testdata, testlabel)` |
-| **DCPM** | - | `model = dcpm_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = dcpm_classify(model, testdata, testlabel)` |
-| **SBLEST** | • `tau`: Time delay parameter | `model = sblest_modeling(traindata, trainlabel, tau)`<br>`[predlabel, decision_values, testacc] = sblest_classify(model, testdata, testlabel)` |
-| **CTSSP** | • `t_win`: Time window cell array<br>• `tau`: Time delay parameter | `model = ctssp_modeling(traindata, trainlabel, t_win, tau)`<br>`[predlabel, decision_values, testacc] = ctssp_classify(model, testdata, testlabel)` |
-| **ENSEMBLE** | • `alg`: List of base algorithms<br>• `useDecisionValues`: Use decision values/predicted values | Meta-learning by integrating classification results of multiple base algorithms<br>`model = p_modeling(traindata, trainlabel, alg, varargin)`<br>`[predlabel, decision_values, testacc] = p_classify(model, testdata, testlabel)` |
-| **RSFDA**<br>(for transfer learning) | • `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | `model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans)`<br>`[predlabel, decision_values, testacc] = rsfda_classify(model, testdata, testlabel)` |
-| **Stacking** | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>`model = stacking_modeling(data, label, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_classify(model, testdata, testlabel)` |
-| **Stacking**<br>(for transfer learning) | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>`model = stacking_tlmodeling(Xs, Ys, Xt, Yt, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_tlclassify(model, testdata, testlabel)` |
+| **CSP** | • `nFilters`: Number of filters<br>• `classifierType`: Classifier type | • `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>• `[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
+| **FBCSP** | • `freqsbands`: Frequency band range array<br>• `nFilters`: Number of filters<br>• `fs`: Sampling rate | • `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>• `[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
+| **FgMDM** | • `metric`: Distance metric | • `model = fgmdm_modeling(traindata,trainlabel,metric)`<br>• `[predlabel, decision_values, testacc] = fgmdm_classify(model, testdata, testlabel)` |
+| **TSM** | • `classifierType`: Classifier type<br>• `optimize`: Whether to automatically optimize classifier parameters<br>• `timeLimit`: Maximum time limit for classifier parameter optimization | • `model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)`<br>• `[predlabel, decision_values, testacc] = tsm_classify(model, testdata, testlabel)` |
+| **TRCA** | - | • `model = trca_modeling(traindata, trainlabel)`<br>• `[predlabel, decision_values, testacc] = trca_classify(model, testdata, testlabel)` |
+| **DCPM** | - | • `model = dcpm_modeling(traindata, trainlabel)`<br>• `[predlabel, decision_values, testacc] = dcpm_classify(model, testdata, testlabel)` |
+| **SBLEST** | • `tau`: Time delay parameter | • `model = sblest_modeling(traindata, trainlabel, tau)`<br>• `[predlabel, decision_values, testacc] = sblest_classify(model, testdata, testlabel)` |
+| **CTSSP** | • `t_win`: Time window cell array<br>• `tau`: Time delay parameter | • `model = ctssp_modeling(traindata, trainlabel, t_win, tau)`<br>• `[predlabel, decision_values, testacc] = ctssp_classify(model, testdata, testlabel)` |
+| **ENSEMBLE** | • `alg`: List of base algorithms<br>• `useDecisionValues`: Use decision values/predicted values | Meta-learning by integrating classification results of multiple base algorithms<br>• `model = p_modeling(traindata, trainlabel, alg, varargin)`<br>• `[predlabel, decision_values, testacc] = p_classify(model, testdata, testlabel)` |
+| **RSFDA**<br>(for transfer learning) | • `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | • `model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans)`<br>• `[predlabel, decision_values, testacc] = rsfda_classify(model, testdata, testlabel)` |
+| **Stacking** | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>• `model = stacking_modeling(data, label, algs, fs, times, freqs, chans, varargin)`<br>• `[predlabel, decision_values, testacc] = stacking_classify(model, testdata, testlabel)` |
+| **Stacking**<br>(for transfer learning) | • `algs`: List of base algorithms<br>• `fs`: Sampling rate<br>• `times`: Time window parameters<br>• `freqs`: Frequency band parameters<br>• `chans`: Channel parameters | Meta-learning by integrating classification results of multiple base algorithms with time window, frequency band, and channel parameter configurations<br>• `model = stacking_tlmodeling(Xs, Ys, Xt, Yt, algs, fs, times, freqs, chans, varargin)`<br>• `[predlabel, decision_values, testacc] = stacking_tlclassify(model, testdata, testlabel)` |
 
 > **Note**: The above function interfaces are examples. Please adjust according to the actual implementation when using. Some algorithm parameters are not listed; see the source code for details.
 
@@ -91,10 +91,10 @@ The system offers a complete experimental platform for BCI research, particularl
 
 | Category | Features | Technical Highlights |
 |----------|----------|----------------------|
-| **Experiment Paradigms** | Left/right hand motor imagery<br>Audiovisual task cues<br>Parameter configuration | Standardized protocols<br>Precise timing control |
-| **Feedback Presentation** | Real-time decoding visualization<br>Gamified feedback interface<br>Multimodal feedback (visual+auditory) | Immersive feedback experience<br>Customizable feedback formats |
-| **Data Recording** | Automatic experiment logging<br>Participant response tracking<br>Timestamp synchronization | Standardized data formats<br>EEG-data synchronization |
-| **System Control** | Experiment workflow management<br>UDP communication<br>System monitoring | Reliable communication protocol<br>Error handling mechanisms |
+| **Experiment Paradigms** | • Left/right hand motor imagery<br>• Audiovisual task cues<br>• Parameter configuration | • Standardized protocols<br>• Precise timing control |
+| **Feedback Presentation** | • Real-time decoding visualization<br>• Gamified feedback interface<br>• Multimodal feedback (visual+auditory) | • Immersive feedback experience<br>• Customizable feedback formats |
+| **Data Recording** | • Automatic experiment logging<br>• Participant response tracking<br>• Timestamp synchronization | • Standardized data formats<br>• EEG-data synchronization |
+| **System Control** | • Experiment workflow management<br>• UDP communication<br>• System monitoring | • Reliable communication protocol<br>• Error handling mechanisms |
 
 </div>
 </div>

@@ -66,18 +66,18 @@
 
 | 分类方法     | 关键参数 | 函数接口 |
 |----------|----------|----------|
-| **CSP** | • `nFilters`: 滤波器数量<br>• `classifierType`: 分类器类型 | `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>`[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
-| **FBCSP** | • `freqsbands`: 频带范围数组<br>• `nFilters`: 滤波器数量<br>• `fs`: 采样率 | `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>`[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
-| **FgMDM** | • `metric`: 距离度量 | `model = fgmdm_modeling(traindata,trainlabel,metric)`<br>`[predlabel, decision_values, testacc] = fgmdm_classify(model, testdata, testlabel)` |
-| **TSM** | • `classifierType`: 分类器类型<br>• `optimize`: 是否自动优化分类器参数<br>• `timeLimit`: 分类器参数优化的最大时间限制 | `model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)`<br>`[predlabel, decision_values, testacc] = tsm_classify(model, testdata, testlabel)` |
-| **TRCA** | - | `model = trca_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = trca_classify(model, testdata, testlabel)` |
-| **DCPM** | - | `model = dcpm_modeling(traindata, trainlabel)`<br>`[predlabel, decision_values, testacc] = dcpm_classify(model, testdata, testlabel)` |
-| **SBLEST** | • `tau`: 时间延迟参数 | `model = sblest_modeling(traindata, trainlabel, tau)`<br>`[predlabel, decision_values, testacc] = sblest_classify(model, testdata, testlabel)` |
-| **CTSSP** | • `t_win`: 时间窗单元数组<br>• `tau`: 时间延迟参数 | `model = ctssp_modeling(traindata, trainlabel, t_win, tau)`<br>`[predlabel, decision_values, testacc] = ctssp_classify(model, testdata, testlabel)` |
-| **ENSEMBLE** | • `alg`: 基础算法列表<br>• `useDecisionValues`: 使用决策值/预测值 | 集成多个基础算法的分类结果进行元学习<br>`model = p_modeling(traindata, trainlabel, alg, varargin)`<br>`[predlabel, decision_values, testacc] = p_classify(model, testdata, testlabel)` |
-| **RSFDA**<br>(用于迁移学习) | • `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | `model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans)`<br>`[predlabel, decision_values, testacc] = rsfda_classify(model, testdata, testlabel)` |
-| **Stacking** | • `algs`: 基础算法列表<br>• `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | 集成多个基础算法和时间窗、频带、导联参数配置的分类结果进行元学习<br>`model = stacking_modeling(data, label, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_classify(model, testdata, testlabel)` |
-| **Stacking**<br>(用于迁移学习) | • `algs`: 基础算法列表<br>• `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | 集成多个基础算法和时间窗、频带、导联参数配置的分类结果进行元学习<br>`model = stacking_tlmodeling(Xs, Ys, Xt, Yt, algs, fs, times, freqs, chans, varargin)`<br>`[predlabel, decision_values, testacc] = stacking_tlclassify(model, testdata, testlabel)` |
+| **CSP** | • `nFilters`: 滤波器数量<br>• `classifierType`: 分类器类型 | • `model = csp_modeling(traindata, trainlabel, nFilters, classifierType)`<br>• `[predlabel, decision_values, testacc] = csp_classify(model, testdata, testlabel)` |
+| **FBCSP** | • `freqsbands`: 频带范围数组<br>• `nFilters`: 滤波器数量<br>• `fs`: 采样率 | • `model = fbcsp_modeling(traindata, trainlabel, nFilters, fs, freqsbands)`<br>• `[predlabel, decision_values, testacc] = fbcsp_classify(model, testdata, testlabel)` |
+| **FgMDM** | • `metric`: 距离度量 | • `model = fgmdm_modeling(traindata,trainlabel,metric)`<br>• `[predlabel, decision_values, testacc] = fgmdm_classify(model, testdata, testlabel)` |
+| **TSM** | • `classifierType`: 分类器类型<br>• `optimize`: 是否自动优化分类器参数<br>• `timeLimit`: 分类器参数优化的最大时间限制 | • `model = tsm_modeling(traindata, trainlabel, classifierType, optimize, timeLimit)`<br>• `[predlabel, decision_values, testacc] = tsm_classify(model, testdata, testlabel)` |
+| **TRCA** | - | • `model = trca_modeling(traindata, trainlabel)`<br>• `[predlabel, decision_values, testacc] = trca_classify(model, testdata, testlabel)` |
+| **DCPM** | - | • `model = dcpm_modeling(traindata, trainlabel)`<br>• `[predlabel, decision_values, testacc] = dcpm_classify(model, testdata, testlabel)` |
+| **SBLEST** | • `tau`: 时间延迟参数 | • `model = sblest_modeling(traindata, trainlabel, tau)`<br>• `[predlabel, decision_values, testacc] = sblest_classify(model, testdata, testlabel)` |
+| **CTSSP** | • `t_win`: 时间窗单元数组<br>• `tau`: 时间延迟参数 | • `model = ctssp_modeling(traindata, trainlabel, t_win, tau)`<br>• `[predlabel, decision_values, testacc] = ctssp_classify(model, testdata, testlabel)` |
+| **ENSEMBLE** | • `alg`: 基础算法列表<br>• `useDecisionValues`: 使用决策值/预测值 | 集成多个基础算法的分类结果进行元学习<br>• `model = p_modeling(traindata, trainlabel, alg, varargin)`<br>• `[predlabel, decision_values, testacc] = p_classify(model, testdata, testlabel)` |
+| **RSFDA**<br>(用于迁移学习) | • `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | • `model = rsfda_modeling(Xs, Ys, Xt, Yt, fs, times, freqs, chans)`<br>• `[predlabel, decision_values, testacc] = rsfda_classify(model, testdata, testlabel)` |
+| **Stacking** | • `algs`: 基础算法列表<br>• `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | 集成多个基础算法和时间窗、频带、导联参数配置的分类结果进行元学习<br>• `model = stacking_modeling(data, label, algs, fs, times, freqs, chans, varargin)`<br>• `[predlabel, decision_values, testacc] = stacking_classify(model, testdata, testlabel)` |
+| **Stacking**<br>(用于迁移学习) | • `algs`: 基础算法列表<br>• `fs`: 采样率<br>• `times`: 时间窗参数<br>• `freqs`: 频带参数<br>• `chans`: 通道参数 | 集成多个基础算法和时间窗、频带、导联参数配置的分类结果进行元学习<br>• `model = stacking_tlmodeling(Xs, Ys, Xt, Yt, algs, fs, times, freqs, chans, varargin)`<br>• `[predlabel, decision_values, testacc] = stacking_tlclassify(model, testdata, testlabel)` |
 
 > **注意**：以上函数接口为示例，实际使用时请根据具体实现进行调整，部分算法参数未列出，详见源码。
 
