@@ -79,7 +79,6 @@ try
     
     ListenChar(2);
     
-    fontname='宋体';
     Screen('TextSize',wPtr,60);
     Screen('TextStyle' ,wPtr,1);
     % Screen('TextColor',wPtr,0);
@@ -99,7 +98,7 @@ try
     % KbWait; % 按键继续程序
     
     while 1
-        [kD,secs,kC]=KbCheck;
+        [kD,secs,kC]=KbCheck;%#ok
         if kC(space)
             time.start=fix(clock);
             break;
@@ -174,7 +173,7 @@ try
                     Screen('PutImage',wPtr,frame_S(:,:,:,k),[0 0 1920 1080])
                     Screen('Flip',wPtr);
                     
-                    [kD,secs,kC]=KbCheck;
+                    [kD,secs,kC]=KbCheck;%#ok
                     if kC(escape)
                         break;
                     end
@@ -196,7 +195,7 @@ try
                     Screen('PutImage',wPtr,frame_L(:,:,:,k),[0 0 1920 1080])
                     Screen('Flip',wPtr);
                     
-                    [kD,secs,kC]=KbCheck;
+                    [kD,secs,kC]=KbCheck;%#ok
                     if kC(escape)
                         break;
                     end
@@ -217,7 +216,7 @@ try
                     Screen('PutImage',wPtr,frame_R(:,:,:,k),[0 0 1920 1080])
                     Screen('Flip',wPtr);
                     
-                    [kD,secs,kC]=KbCheck;
+                    [kD,secs,kC]=KbCheck;%#ok
                     if kC(escape)
                         break;
                     end
