@@ -217,7 +217,7 @@ StimulateClient;
 <em>Figure 2: Overall System Architecture</em>
 </p>
 
-### 采集端架构
+### AcquisitionClient Structure
 ```text
 AcquisitionClient/
 ├── HelpSystem/                # Help documentation
@@ -245,7 +245,7 @@ AcquisitionClient/
 └── UDPComm.m                  # UDP communication
 ```
 
-### 反馈端架构
+### StimulateClient Structure
 ```text
 StimulateClient/
 ├── Paradigms/                 # Experiment paradigms
