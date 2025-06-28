@@ -20,7 +20,7 @@ end
 % 仅保留前两类标签
 stype=unique(slabel);
 ttype=unique(tlabel);
-if ~isequal(stype,ttype); error('源域与目标域的样本标签不一致');end
+if ~isequal(stype(1:2),ttype(1:2)); error('源域与目标域的样本标签不一致');end:
 sdata=sdata(:,:,slabel<=stype(2));
 slabel=slabel(slabel<=stype(2));
 tdata=tdata(:,:,tlabel<=ttype(2));
