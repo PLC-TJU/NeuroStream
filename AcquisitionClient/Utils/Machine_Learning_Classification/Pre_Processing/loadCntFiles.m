@@ -101,6 +101,13 @@ for idxF = 1:numel(files)
         samples = nan(size(eegData,1), sampWin, nTrials);
         for t = 1:nTrials
             st = lat(t) + offset;
+            if st <= 0
+                st = lat(t);
+                ed = st + round(timewindow(2) * EEG.srate) -1;
+                temp=ones(size(eegData,1),abs(offset))*eps;
+                samples(:,:,t) = cat(2,temp,eegData(:, st:ed));
+                continue;
+            end
             ed = st + sampWin -1;
             samples(:,:,t) = eegData(:, st:ed);
         end
