@@ -1,0 +1,167 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3164851870" file="E:\工作进展\脑机接口系统搭建\NeuroStream\StimulateClient\Stimulate_Client_APP.prj" location="E:\工作进展\脑机接口系统搭建\NeuroStream\StimulateClient" name="Stimulate_Client_APP" target="target.mlapps" target-name="打包为 App">
+    <param.appname>Stimulate_Client_APP</param.appname>
+    <param.authnamewatermark>LC.Pan&lt;panlincong@tju.edu.cn&gt;</param.authnamewatermark>
+    <param.email>panlincong@tju.edu.cn</param.email>
+    <param.company />
+    <param.icon>${PROJECT_ROOT}\Stimulate_Client_APP_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\Stimulate_Client_APP_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\Stimulate_Client_APP_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\Stimulate_Client_APP_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary>LC. Pan专用。2025.6.1</param.summary>
+    <param.description>1、在刺激实验范式界面端电脑运行。
+2、搭配[脑机接口在线识别与反馈系统APP]使用。
+3、要求MATLAB为2021b及以后版本。
+4、LC. Pan定制版。</param.description>
+    <param.screenshot>C:\Users\panli\AppData\Local\Temp\tp1c946f25_d946_4d70_8130_f6cb7e9b9530.png</param.screenshot>
+    <param.version>1.2</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms>
+      <item>win64</item>
+    </param.platforms>
+    <param.output>E:\工作进展\脑机接口系统搭建\NeuroStream\APP</param.output>
+    <param.guid>fe4f36ab-6110-4676-a956-f50963df194d</param.guid>
+    <unset>
+      <param.company />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\StimulateClient.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>C:\Users\panli\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\cprintf - display formatted colored text in Command Window\cprintf.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\CharAvail.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\DrawFormattedText.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\FlushEvents.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\GetChar.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\GetMouse.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\HideCursor.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\IsWinVista.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\KbCheck.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\KbName.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\KbQueueReserve.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\KbWait.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\ListenChar.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\LoadPsychHID.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\MatlabWindowsFilesR2007a\GetSecs.mexw64</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\MatlabWindowsFilesR2007a\PsychHID.mexw64</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\MatlabWindowsFilesR2007a\Screen.mexw64</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\MatlabWindowsFilesR2007a\WaitSecs.mexw64</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\psychlasterror.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\psychrethrow.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\SetMouse.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychBasic\ShowCursor.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychContributed\ple.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychDocumentation\PsychPaidSupportAndServices.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychFiles\PsychtoolboxConfigDir.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychHardware\GetKeyboardIndices.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychHardware\GetKeypadIndices.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychHardware\GetMouseIndices.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychJava\AssignGetCharJava.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychJava\JavaTimeToGetSecs.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychJava\PsychJavaSwingCleanup.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychJava\PsychJavaTrouble.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychJava\psychusejava.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychObsolete\IsOS9.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychObsolete\IsWindows.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\AssertOpenGL.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsGUI.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsLinux.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsOctave.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsOSX.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsWayland.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\IsWin.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\PsychDefaultSetup.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\PsychNumel.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\PsychtoolboxRoot.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\RestoreCluts.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\sca.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\streq.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\WhiteIndex.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychOneliners\WrapString.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\CenterRect.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\OffsetRect.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectBottom.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectCenter.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectCenterd.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectHeight.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectLeft.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectRight.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectTop.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\RectWidth.m</file>
+      <file>D:\Program Files\MATLAB\psychtoolbox\toolbox\Psychtoolbox\PsychRects\SetRect.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\Paradigms</file>
+      <file>${PROJECT_ROOT}\Resources</file>
+      <file>${PROJECT_ROOT}\Utils</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="E:\工作进展\脑机接口系统搭建\NeuroStream" name="APP" optional="false">E:\工作进展\脑机接口系统搭建\NeuroStream\APP</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>D:\Program Files\MATLAB\R2021b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

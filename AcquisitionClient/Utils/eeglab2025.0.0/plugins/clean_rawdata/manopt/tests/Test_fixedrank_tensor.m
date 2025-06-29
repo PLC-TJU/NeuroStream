@@ -81,8 +81,8 @@ function Test_fixedrank_tensor()
     % Define the problem cost function. The input X is a structure with
     % fields U1, U2, U3, G representing a rank (r1,r2,r3) tensor.
     % f(X) = 1/2 * || P.*(X - A) ||^2
-    problem.cost = @cost;
-    function f = cost(X)
+    problem.cost = @costfunc;
+    function f = costfunc(X)
         Xmultiarray = tucker2multiarray(X);
         Diffmultiarray = P.*Xmultiarray - PA;
         Diffmultiarray_flat = reshape(Diffmultiarray, n1, n2*n3);
