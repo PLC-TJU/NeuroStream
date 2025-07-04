@@ -3,9 +3,12 @@
 % LC.Pan <panlincong@tju.edu.cn>
 % Data: 2025.5.1
 
-function Model = tlmodel_training(sdata,slabel,tdata,tlabel,alg,freqs,times,chans)
+function Model = tlmodel_training(sdata,slabel,tdata,tlabel,alg,oriFs,freqs,times,chans)
 if ~exist('alg','var') || isempty(alg)
     alg = 'CSP';
+end
+if ~exist('oriFs','var') || isempty(oriFs)
+    oriFs=1000;
 end
 if ~exist('freqs','var') || isempty(freqs)
     freqs=[8,30];
@@ -27,22 +30,32 @@ tdata=tdata(:,:,tlabel<=ttype(2));
 tlabel=tlabel(tlabel<=ttype(2));
 
 % 降采样
-originalFs=1000;
+originalFs=oriFs;
 targetFs=250;
-temp=resample(permute(sdata,[2,1,3]),targetFs,originalFs);
-sdata=permute(temp,[2,1,3]);
-temp=resample(permute(tdata,[2,1,3]),targetFs,originalFs);
-tdata=permute(temp,[2,1,3]);
+if ~isequal(originalFs,targetFs)
+    temp=resample(permute(sdata,[2,1,3]),targetFs,originalFs);
+    sdata=permute(temp,[2,1,3]);
+    temp=resample(permute(tdata,[2,1,3]),targetFs,originalFs);
+    tdata=permute(temp,[2,1,3]);
+end
 
 %% 对于RSFDA和Stacking集成模型
 if strcmpi(alg,'RSFDA')
-    Model = rsfda_modeling(sdata, slabel, tdata, tlabel, targetFs, times(end));
+    if ~isempty(times)
+        Model = rsfda_modeling(sdata, slabel, tdata, tlabel, targetFs, times(end));
+    else
+        Model = rsfda_modeling(sdata, slabel, tdata, tlabel, targetFs);
+    end
     Model.originalFs=originalFs;
     Model.targetFs=targetFs;
     return;
 elseif strcmpi(alg, 'Stacking') %'Stacking_TL'
     algs ={'CSP','FgMDM','TSM','SBLEST'};
-    Model = stacking_tlmodeling(sdata, slabel, tdata, tlabel, algs, targetFs, times(end));
+    if ~isempty(times)
+        Model = stacking_tlmodeling(sdata, slabel, tdata, tlabel, algs, targetFs, times(end));
+    else
+        Model = stacking_tlmodeling(sdata, slabel, tdata, tlabel, algs, targetFs);
+    end
     Model.originalFs=originalFs;
     Model.targetFs=targetFs;
     return;

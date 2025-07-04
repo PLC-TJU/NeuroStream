@@ -39,7 +39,7 @@ function A = riemann_mean(B,args)
     end
 
     if niter==N_itermax
-        disp('Warning : Nombre niter reachs maximum atteint');
+        %disp('Warning : Nombre niter reachs maximum atteint');
     end
     critere = fc;
 end

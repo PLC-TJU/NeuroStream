@@ -27,21 +27,22 @@ end
 if ~exist('freqs','var') || isempty(freqs)
     freqs=[8,13;13,18;18,26;23,30;8,30];
 end
-if ~exist('times','var') || isempty(times) || isscalar(times)
-    if isscalar(times)
-        maxtime=times;
-    else
-        maxtime=size(Xs,2)/fs;
-    end
-    if maxtime>=4
-        times=[0,2;1,3;2,4;0,3;1,4;0,4];
-    elseif maxtime>=3
-        times=[0,2;1,3;0,3];
-    elseif maxtime>=2
-        times=[0,1.5;0.5,2;0,2];
-    else
-        times=[0,maxtime];
-    end
+if ~exist('times','var')
+    times=[];
+end
+if isscalar(times)
+    maxtime=times;
+else
+    maxtime=size(Xs,2)/fs;
+end
+if maxtime>=4
+    times=[0,2;1,3;2,4;0,3;1,4;0,4];
+elseif maxtime>=3
+    times=[0,2;1,3;0,3];
+elseif maxtime>=2
+    times=[0,1.5;0.5,2;0,2];
+else
+    times=[0,maxtime];
 end
 if ~exist('chans','var') || isempty(chans)
     chans={1:size(Xs,1)};
@@ -58,7 +59,7 @@ addParameter(p, 'UseDecisionValues', true, @islogical);
 addParameter(p, 'Optimize', false, @islogical);
 addParameter(p, 'OptimizeTimeLimit', 30, @isnumeric);
 addParameter(p, 'Verbose', false, @islogical);
-addParameter(p, 'UseParallel', true, @islogical); % 添加并行计算选项
+addParameter(p, 'UseParallel', false, @islogical); % 添加并行计算选项
 parse(p, varargin{:});
 
 % 初始化模型结构

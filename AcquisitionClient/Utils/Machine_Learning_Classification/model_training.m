@@ -3,9 +3,12 @@
 % LC.Pan <panlincong@tju.edu.cn>
 % Data: 2025.5.1
 
-function Model = model_training(data,label,alg,freqs,times,chans)
+function Model = model_training(data,label,alg,oriFs,freqs,times,chans)
 if ~exist('alg','var') || isempty(alg)
     alg = 'CSP';
+end
+if ~exist('oriFs','var') || isempty(oriFs)
+    oriFs=1000;
 end
 if ~exist('freqs','var') || isempty(freqs)
     freqs=[8,30];
@@ -23,15 +26,21 @@ data=data(:,:,label<=type(2));
 label=label(label<=type(2));
 
 % 降采样
-originalFs=1000;
+originalFs=oriFs;
 targetFs=250;
-temp=resample(permute(data,[2,1,3]),targetFs,originalFs);
-data=permute(temp,[2,1,3]);
+if ~isequal(originalFs,targetFs)
+    temp=resample(permute(data,[2,1,3]),targetFs,originalFs);
+    data=permute(temp,[2,1,3]);
+end
 
 %% 对于Stacking集成模型
 if strcmpi(alg,'Stacking')
-    algs ={'CSP','FgMDM','TSM'};
-    Model = stacking_modeling(data, label, algs, targetFs, times(end));
+    algs ={'CSP','FgMDM','TSM','SBLEST'};
+    if ~isempty(times)
+        Model = stacking_modeling(data, label, algs, targetFs, times(end));
+    else
+        Model = stacking_modeling(data, label, algs, targetFs);
+    end
     Model.originalFs=originalFs;
     Model.targetFs=targetFs;
     return;

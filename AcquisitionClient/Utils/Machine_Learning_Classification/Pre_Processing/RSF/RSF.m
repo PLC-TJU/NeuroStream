@@ -7,7 +7,7 @@
 
 function [W,trainData,testData,dd]=RSF(traindata,trainlabel,testdata,dim,method)
 if ~exist('dim','var') || isempty(dim)
-    dim = 6;
+    dim = 8;
 end
 if ~exist('method','var') || isempty(method)
     method = 'default';
@@ -82,7 +82,7 @@ try
     end
 catch ME
     save_error(ME,'errorLog.txt',false,'dim',dim,'method',method)
-    [trainData,testData,dd,W]=RSF(traindata,trainlabel,testdata,dim);
+    [trainData,testData,dd,W]=RSF(traindata,trainlabel,testdata,dim,'cspf');
     return
 end
 

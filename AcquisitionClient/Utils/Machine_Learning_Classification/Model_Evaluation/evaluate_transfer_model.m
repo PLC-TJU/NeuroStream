@@ -2,7 +2,7 @@
 % LC.Pan <panlincong@tju.edu.cn>
 % Data: 2025.6.2
 
-function results = evaluate_transfer_model(sdata, slabel, tdata, tlabel, alg, freqs, timeset)
+function results = evaluate_transfer_model(sdata, slabel, tdata, tlabel, alg, fs, freqs, timeset)
     % 初始化结果结构
     results = struct();
     results.algorithm = alg;
@@ -96,7 +96,7 @@ function results = evaluate_transfer_model(sdata, slabel, tdata, tlabel, alg, fr
                 model = tlmodel_training(...
                     sdata, slabel, ...
                     tdata(:,:,trainIdx), tlabel(trainIdx), ...
-                    alg, freqs, times); %#ok
+                    alg, fs, freqs, times); %#ok
                 trainTime(fold) = toc(tStart);
 
                 % 测试模型
@@ -152,7 +152,7 @@ function results = evaluate_transfer_model(sdata, slabel, tdata, tlabel, alg, fr
                 model = tlmodel_training(...
                     sdata, slabel, ...
                     tdata(:,:,trainIdx), tlabel(trainIdx), ...
-                    alg, freqs, times); 
+                    alg, fs, freqs, times); 
                 trainTime(fold) = toc(tStart);
 
                 % 测试模型

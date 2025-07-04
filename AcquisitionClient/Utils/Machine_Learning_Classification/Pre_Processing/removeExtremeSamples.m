@@ -9,7 +9,7 @@ function [cleanData, outlierIndices] = removeExtremeSamples(data, sensitivity)
 
 % 参数检查
 if nargin < 2 || isempty(sensitivity)
-    sensitivity = 0.75; % 默认敏感度
+    sensitivity = 0.75; % 默认敏感度，在
 end
 
 % 确保敏感度在0-1之间

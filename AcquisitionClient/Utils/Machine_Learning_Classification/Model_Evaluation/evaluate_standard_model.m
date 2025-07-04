@@ -2,7 +2,7 @@
 % LC.Pan <panlincong@tju.edu.cn>
 % Data: 2025.6.2
 
-function results = evaluate_standard_model(data, label, alg, freqs, timeset)
+function results = evaluate_standard_model(data, label, alg, fs, freqs, timeset)
     % 初始化结果结构
     results = struct();
     results.algorithm = alg;
@@ -89,7 +89,7 @@ function results = evaluate_standard_model(data, label, alg, freqs, timeset)
                 % 训练模型
                 tStart = tic;
                 model = model_training(...
-                    data(:,:,trainIdx), label(trainIdx), alg, freqs, times); %#ok
+                    data(:,:,trainIdx), label(trainIdx), alg, fs, freqs, times); %#ok
                 trainTime(fold) = toc(tStart);
                 
                 % 测试模型
@@ -143,7 +143,7 @@ function results = evaluate_standard_model(data, label, alg, freqs, timeset)
                 % 训练模型
                 tStart = tic;
                 model = model_training(...
-                    data(:,:,trainIdx), label(trainIdx), alg, freqs, times); 
+                    data(:,:,trainIdx), label(trainIdx), alg, fs, freqs, times); 
                 trainTime(fold) = toc(tStart);
                 
                 % 测试模型

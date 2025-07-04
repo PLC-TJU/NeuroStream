@@ -15,8 +15,10 @@ end
 % 降采样
 originalFs=model.originalFs;
 targetFs=model.targetFs;
-temp=resample(permute(data, [2,1,3]),targetFs,originalFs);
-data=permute(temp,[2,1,3]);
+if ~isequal(originalFs,targetFs)
+    temp=resample(permute(data, [2,1,3]),targetFs,originalFs);
+    data=permute(temp,[2,1,3]);
+end
 
 %% 对于Stacking集成模型
 if strcmpi(model.name,'Stacking')

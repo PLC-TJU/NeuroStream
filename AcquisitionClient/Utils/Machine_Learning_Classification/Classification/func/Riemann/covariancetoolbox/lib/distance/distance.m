@@ -31,13 +31,10 @@
 
 % [EOF: XXX.m]
 
-function d = distance(C1,C2,method_dist,arg_dist)
+function d = distance(C1,C2,method_dist)
 
 if (nargin<3)||(isempty(method_dist))
     method_dist = 'euclid';
-end
-if (nargin<4)
-    arg_dist = {};
 end
 
 switch method_dist
