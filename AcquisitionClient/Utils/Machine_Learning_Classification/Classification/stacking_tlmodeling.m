@@ -249,6 +249,7 @@ else
         
         % 训练子模型
         subModel = p_modeling(fX, Y, config.alg, varargin{:});
+        subModel.Wrct = Mt;
         subModel.Wrsf = Wrsf;
         
         % 在训练集上测试子模型（得到预测标签和决策值）

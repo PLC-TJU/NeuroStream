@@ -9,7 +9,7 @@ function model = single_rsfda_modeling(Xs, Ys, Xt, Yt, options)
 if nargin < 5 || isempty(options)
     options = struct();
 end
-if ~isfield(options, 'method_mean'), options.method_mean = 'riemann'; end
+if ~isfield(options, 'metric'), options.metric = 'riemann'; end
 if ~isfield(options, 'method_feasel'), options.method_feasel = 'MIBIF'; end
 if ~isfield(options, 'maxFeaNum'), options.maxFeaNum = 30; end
 if ~isfield(options, 'classifierType'), options.classifierType = 'SVM'; end
@@ -24,16 +24,16 @@ model.type=type;
 model.Wrsf=Wrsf;
 
 % 数据预对齐
-method_mean = options.method_mean;
+metric = options.metric;
 Cs = covariances(Xs);
-Mrct = mean_covariances(Cs, method_mean);
+Mrct = mean_covariances(Cs, metric);
 Mrct = Mrct^(-1/2);
 for s=1:size(Cs,3)
     Cs(:,:,s)=Mrct*Cs(:,:,s)*Mrct;
 end
 
 Ct = covariances(Xt);
-Mrct = mean_covariances(Ct, method_mean);
+Mrct = mean_covariances(Ct, metric);
 Mrct = Mrct^(-1/2);
 for s=1:size(Ct,3)
     Ct(:,:,s)=Mrct*Ct(:,:,s)*Mrct;
@@ -42,9 +42,9 @@ end
 model.Mrct=Mrct;
 
 % 提取切空间特征
-MC = mean_covariances(Cs, method_mean);
+MC = mean_covariances(Cs, metric);
 Fs = Tangent_space(Cs,MC)';
-MC = mean_covariances(Ct, method_mean);
+MC = mean_covariances(Ct, metric);
 Ft = Tangent_space(Ct,MC)';
 
 model.MC=MC;
