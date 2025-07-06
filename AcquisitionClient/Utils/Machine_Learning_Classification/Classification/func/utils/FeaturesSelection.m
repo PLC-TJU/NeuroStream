@@ -15,8 +15,8 @@ function [FeaSelect,index]=FeaturesSelection(Fea,label,method,maxFeaNum)
 if nargin<4
     maxFeaNum=[];
 end
-if nargin<3
-    method='MIBIF';
+if nargin<3 || isempty(method)
+    method='NONE';
 end
 
 if size(Fea,2)<=3
@@ -46,4 +46,7 @@ switch upper(method)
     case 'LASSO'
         %默认保留的特征维数小于原特征维数
         [FeaSelect,index]=LASSO_FeaturesSelection(Fea,label,maxFeaNum);
+    otherwise
+        FeaSelect=Fea;
+        index=1:size(Fea,2);
 end
