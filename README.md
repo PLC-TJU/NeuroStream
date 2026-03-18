@@ -363,8 +363,8 @@ EEG信号处理的开源MATLAB工具箱
 
 **核心开发者**
 
-- 作者: 潘林聪 (Lincong Pan)
-- 邮箱: panlincong@tju.edu.cn
+- 作者: 
+- 邮箱: 
 - 机构: 天津大学
 
 **其他贡献者**
@@ -393,9 +393,3 @@ Copyright (c) 2023-2025 潘林聪
 无论是合同诉讼、侵权诉讼还是其他诉讼。
 ```
 
-
-## 
-最后更新: 2025年6月25日  
-项目维护: 潘林聪 (Lincong Pan)  
-项目主页: https://github.com/PLC-TJU/NEUROSTREAM  
-联系邮箱: panlincong@tju.edu.cn  
