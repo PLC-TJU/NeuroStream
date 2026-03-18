@@ -359,8 +359,8 @@ Open-source MATLAB toolbox for EEG signal processing
 
 **Core Developer**
 
-- Author: Lincong Pan
-- Email: panlincong@tju.edu.cn
+- Author: 
+- Email: 
 - Institution: Tianjin University
 
 **Other Contributors**
@@ -397,9 +397,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-
-## 
-Last Updated: June 25, 2025  
-Maintainer: Lincong Pan  
-Project Home: https://github.com/PLC-TJU/NEUROSTREAM  
-Contact: panlincong@tju.edu.cn  
